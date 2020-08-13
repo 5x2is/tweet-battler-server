@@ -19,6 +19,7 @@ exports.getTweetList = functions.https.onCall(async(data, context) => {
 					user_id:data.userId,
 					count:3
 				}
+				//console.log(data);
 
 				const tweets = await client.get('statuses/user_timeline', params);
 				return tweets;
